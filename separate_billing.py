@@ -249,7 +249,7 @@ def do_show(shell, args):
 
 
 @retry(stop_max_attempt_number=5, wait_fixed=1000)
-def get_invoices(shell, start, end, project=None):
+def get_invoices(shell, start, end, project_id=None):
     return shell.distil.invoices.list(start, end,
                                       detailed=True,
                                       project_id=project_id)
